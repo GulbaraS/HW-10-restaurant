@@ -30,8 +30,8 @@ class Electrocars extends Cars {
 
 
 const bmw = new Cars("bmw", "2009", "red", "diesel");
-const tesla = new Electrocars("Tesla",2019, "white", "electro", 5);
+const tesla = new Electrocars("Tesla",2019, "white", "electro",);
 
- console.log(bmw.showInfo());
+console.log(bmw.showInfo());
 console.log(tesla.showInfo());
 console.log(tesla.promote());

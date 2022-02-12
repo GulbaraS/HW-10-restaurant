@@ -32,9 +32,10 @@
 // console.log(mary.greet());
 
 class Restaurant {
-  constructor(name, cusineType) {
+  constructor(name, cusineType, served) {
     this.name = name;
     this.cusineType = cusineType;
+    this.served = 0;
   }
 
   showInfo() {
@@ -63,9 +64,31 @@ class Restaurant {
       }
     }
   }
+
+  serve() {
+    return this.served +=1;
+  };
+
+  setServed(){   
+   return Math.floor(res);
+  }
+
+  showTotalServed(){
+    return Math.floor(res + (this.serve() -1));
+  }
+
 }
 
+const res = Number(prompt("введите количество посетителей"));
+
 const beshBarmak = new Restaurant("Besh Barmak", "kyrgyz");
+
+console.log(beshBarmak.showInfo());
 console.log(beshBarmak.isOpen());
+
+console.log(beshBarmak.serve());
+console.log(beshBarmak.serve());
+console.log(beshBarmak.setServed());
+console.log(beshBarmak.showTotalServed());
 
 
